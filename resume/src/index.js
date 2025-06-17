@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { CustomThemeProvider } from "./ThemeContext";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <CustomThemeProvider>
     <App />
-  </React.StrictMode>
+  </CustomThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

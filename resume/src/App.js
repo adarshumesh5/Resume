@@ -1,30 +1,39 @@
-
 import './App.css';
 import React from "react";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, IconButton, Box, Link } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { useColorMode } from "./ThemeContext";
 import Education from './Education';
 import WorkExperience from './WorkExperience';
 import Skills from './Skills';
 import Projects from './Projects';
-import { Link } from "@mui/material";
 
 function App() {
+  const theme = useTheme();
+  const { toggleColorMode } = useColorMode();
+
   return (
     <Container maxWidth="md" sx={{ padding: 4 }}>
+      <Box display="flex" justifyContent="flex-end" mb={2}>
+        <IconButton onClick={toggleColorMode}>
+          {theme.palette.mode === "dark" ? "☀️" : "🌙"}
+        </IconButton>
+      </Box>
+
       <Typography variant="h4" gutterBottom align="center">
         Adarsh Umesh
       </Typography>
       <Typography variant="body1" align="center" gutterBottom>
         Los Angeles, CA | +1 (747)333-4258 | adarshumesh657@gmail.com | {" "}
-  <Link href="https://www.linkedin.com/in/adarsh-umesh/" target="_blank" rel="noopener">
-    LinkedIn
-  </Link>{" "} | {" "}
-  <Link href="https://github.com/adarshumesh5" target="_blank" rel="noopener">
-    GitHub
-  </Link>{" "}
+        <Link href="https://www.linkedin.com/in/adarsh-umesh/" target="_blank" rel="noopener">
+          LinkedIn
+        </Link>{" "} | {" "}
+        <Link href="https://github.com/adarshumesh5" target="_blank" rel="noopener">
+          GitHub
+        </Link>{" "}
       </Typography>
 
-      <Education/>
+      <Education />
       <WorkExperience />
       <Projects />
       <Skills />
