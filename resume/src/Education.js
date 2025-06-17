@@ -18,8 +18,7 @@ const Education = () => (
       <Typography variant="h6">CMR Institute of Technology, Bangalore, India</Typography>
       <Typography variant="subtitle1">Bachelor of Engineering in Electronics and Communication | Aug 2020</Typography>
       <Typography variant="body2">
-        GPA: 6.71/10 | Concentration: Network theory, Programming in C, C++, and Java, Digital System Processing, Control Systems, Analog Electronics Circuits, Digital Electronics, Verilog HDL, FPGA Based System design Using Verilog, Control Systems, Microcontrollers, Operating Systems , Microwave Theory & Antennas, VLSI Design, Computer Organization & ARM
-Microcontrollers, Digital System Design using Verilog, Network Analysis.   
+        GPA: 6.71/10 | Concentration: Network theory, Programming in C, C++, and Java, Digital System Processing, Control Systems, Analog Electronics Circuits, Digital Electronics, Verilog HDL, FPGA Based System design Using Verilog, Control Systems, Microcontrollers, Operating Systems, Microwave Theory & Antennas, VLSI Design, Computer Organization & ARM Microcontrollers, Digital System Design using Verilog, Network Analysis.
       </Typography>
     </Paper>
   </Box>
