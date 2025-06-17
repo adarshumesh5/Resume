@@ -6,6 +6,7 @@ import Education from './Education';
 import WorkExperience from './WorkExperience';
 import Skills from './Skills';
 import Projects from './Projects';
+import { Link } from "@mui/material";
 
 function App() {
   return (
@@ -14,7 +15,13 @@ function App() {
         Adarsh Umesh
       </Typography>
       <Typography variant="body1" align="center" gutterBottom>
-        Los Angeles, CA | +1 (747)333-4258 | adarshumesh657@gmail.com | LinkedIn | GitHub
+        Los Angeles, CA | +1 (747)333-4258 | adarshumesh657@gmail.com | {" "}
+  <Link href="https://www.linkedin.com/in/adarsh-umesh/" target="_blank" rel="noopener">
+    LinkedIn
+  </Link>{" "} | {" "}
+  <Link href="https://github.com/adarshumesh5" target="_blank" rel="noopener">
+    GitHub
+  </Link>{" "}
       </Typography>
 
       <Education/>

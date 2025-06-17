@@ -51,7 +51,7 @@ const WorkExperience = () => (
         "Built scalable web applications using React.js, Node.js, and Java Spring Boot.",
         "Achieved 95% test coverage across stack using Jest, Mocha, and JUnit.",
         "Reduced technical debt by 25% and improved responsiveness by 30% using Redux.",
-        "Collaborated on API documentation, localization for 24 languages, and performance testing with JMeter."
+        "Collaborated with senior developers in debugging and resolving production issues, reducing bug resolution time by 15%."
       ]}
     />
   </Box>
