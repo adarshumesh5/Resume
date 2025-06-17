@@ -33,7 +33,17 @@ const Projects = () => (
 );
 
 const ProjectEntry = ({ title, bullets }) => (
-  <Paper sx={{ p: 2, mb: 2 }}>
+  <Paper
+    sx={{
+      p: 2,
+      mb: 2,
+      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+      '&:hover': {
+        transform: 'scale(1.2)',
+        boxShadow: 4
+      }
+    }}
+  >
     <Typography variant="subtitle1"><strong>{title}</strong></Typography>
     <List dense>
       {bullets.map((bullet, index) => (

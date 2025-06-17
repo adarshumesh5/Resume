@@ -6,7 +6,17 @@ const Education = () => (
     <Typography variant="h5" gutterBottom>Education</Typography>
     <Divider sx={{ mb: 2 }} />
 
-    <Paper sx={{ p: 2, mb: 2 }}>
+    <Paper
+      sx={{
+        p: 2,
+        mb: 2,
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        '&:hover': {
+          transform: 'scale(1.2)',
+          boxShadow: 4
+        }
+      }}
+    >
       <Typography variant="h6">California State University Northridge, CA</Typography>
       <Typography variant="subtitle1">Master of Science in Engineering Management | May 2025</Typography>
       <Typography variant="body2">
@@ -14,7 +24,16 @@ const Education = () => (
       </Typography>
     </Paper>
 
-    <Paper sx={{ p: 2 }}>
+    <Paper
+      sx={{
+        p: 2,
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        '&:hover': {
+          transform: 'scale(1.2)',
+          boxShadow: 4
+        }
+      }}
+    >
       <Typography variant="h6">CMR Institute of Technology, Bangalore, India</Typography>
       <Typography variant="subtitle1">Bachelor of Engineering in Electronics and Communication | Aug 2020</Typography>
       <Typography variant="body2">

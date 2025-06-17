@@ -30,7 +30,8 @@ const WorkExperience = () => (
         "Collaborated on API documentation, localization for 24 languages, and performance testing with JMeter."
       ]}
     />
-       <ExperienceEntry
+
+    <ExperienceEntry
       title="Associate Software Engineer"
       company="GlobalLogic India Private Limited (Contractor to iCIMS)"
       location="Bangalore, India"
@@ -42,7 +43,8 @@ const WorkExperience = () => (
         "Collaborated on API documentation, localization for 24 languages, and performance testing with JMeter."
       ]}
     />
-       <ExperienceEntry
+
+    <ExperienceEntry
       title="Trainee Software Engineer"
       company="GlobalLogic India Private Limited (Contractor to iCIMS)"
       location="Bangalore, India"
@@ -58,7 +60,17 @@ const WorkExperience = () => (
 );
 
 const ExperienceEntry = ({ title, company, location, date, bullets }) => (
-  <Paper sx={{ p: 2, mb: 2 }}>
+  <Paper
+    sx={{
+      p: 2,
+      mb: 2,
+      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+      '&:hover': {
+        transform: 'scale(1.2)',
+        boxShadow: 4
+      }
+    }}
+  >
     <Typography variant="h6">{title} @ {company}</Typography>
     <Typography variant="subtitle2">{location} | {date}</Typography>
     <List dense>

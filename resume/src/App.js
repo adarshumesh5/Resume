@@ -20,11 +20,25 @@ function App() {
         </IconButton>
       </Box>
 
+      <Box display="flex" justifyContent="center" mb={2}>
+        <img
+          src="/profile.jpg"
+          alt="Adarsh Umesh"
+          style={{
+            width: 120,
+            height: 120,
+            borderRadius: "50%",
+            border: "2px solid #888",
+            objectFit: "cover"
+          }}
+        />
+      </Box>
+
       <Typography variant="h4" gutterBottom align="center">
         Adarsh Umesh
       </Typography>
       <Typography variant="body1" align="center" gutterBottom>
-        Los Angeles, CA | +1 (747)333-4258 | adarshumesh657@gmail.com | {" "}
+        Los Angeles, CA | +1 (747)333-4258 | adarshumesh657@gmail.com |{" "}
         <Link href="https://www.linkedin.com/in/adarsh-umesh/" target="_blank" rel="noopener">
           LinkedIn
         </Link>{" "} | {" "}
