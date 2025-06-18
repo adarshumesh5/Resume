@@ -72,7 +72,7 @@ function App() {
   );
 
   return (
-    <Router>
+    <Router basename="/Resume">
       <BackgroundParticles />
       <Routes>
         <Route path="/" element={<ResumeLayout />} />
