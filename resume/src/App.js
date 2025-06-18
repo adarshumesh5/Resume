@@ -35,7 +35,7 @@ function App() {
 
         <Box display="flex" justifyContent="center" mb={2}>
           <img
-            src="/profile.jpg"
+            src={`${process.env.PUBLIC_URL}/profile.jpg`}
             alt="Adarsh Umesh"
             style={{
               width: 120,
@@ -48,7 +48,7 @@ function App() {
         </Box>
 
         <Typography variant="h4" gutterBottom align="center">
-          Adarsh Umesh
+          ADARSH UMESH
         </Typography>
         <Typography variant="body1" align="center" gutterBottom>
           Los Angeles, CA | +1 (747)333-4258 | adarshumesh657@gmail.com |{" "}
