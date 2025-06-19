@@ -9,7 +9,7 @@ const About = () => {
     <Container sx={{ mt: 5, minHeight: '100vh' }}>
       <Button
         variant="outlined"
-        onClick={() => navigate('/')}
+        onClick={() => navigate('/resume')}
         sx={{ mb: 3 }}
       >
         ← Back to Resume
@@ -31,7 +31,7 @@ const About = () => {
         <Grid item xs={12} md={6}>
           <Box
             component="img"
-            src={`${process.env.PUBLIC_URL}/about-me.jpg`} // replace with your image
+            src={`${process.env.PUBLIC_URL}/about-me.jpg`}
             alt="Adarsh Umesh"
             sx={{
               width: '100%',

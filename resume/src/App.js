@@ -12,6 +12,7 @@ import Header from './Header';
 import ProfilePicture from './ProfilePicture';
 import NavBar from './NavBar';
 import About from './About';
+import LandingPage from './LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -75,7 +76,8 @@ function App() {
     <Router basename="/Resume">
       <BackgroundParticles />
       <Routes>
-        <Route path="/" element={<ResumeLayout />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/resume" element={<ResumeLayout />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </Router>
