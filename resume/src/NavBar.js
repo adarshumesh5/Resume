@@ -16,12 +16,14 @@ import { useTheme } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
+import { useColorMode } from "./ThemeContext";
 
 const NavBar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [drawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
+  const { toggleColorMode } = useColorMode();
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -33,6 +35,7 @@ const NavBar = () => {
   const navItems = [
     { label: 'Home', icon: <HomeIcon />, action: () => navigate("/") },
     { label: 'About Me', action: () => navigate("/about") },
+    { label: 'Contact', action: () => navigate("/contact") },
     { label: 'Education', action: () => scrollTo("education") },
     { label: 'Experience', action: () => scrollTo("experience") },
     { label: 'Projects', action: () => scrollTo("projects") },
@@ -65,16 +68,26 @@ const NavBar = () => {
                       <ListItemText primary={item.label} />
                     </ListItem>
                   ))}
+                  <ListItem>
+                    <IconButton onClick={toggleColorMode} color="inherit">
+                      {theme.palette.mode === "dark" ? "🌙" : "☀️"}
+                    </IconButton>
+                  </ListItem>
                 </List>
               </Drawer>
             </>
           ) : (
-            navItems.map((item, index) => (
-              <Button key={index} onClick={item.action} color="inherit">
-                {item.icon ? <HomeIcon sx={{ mr: 1 }} /> : null}
-                {item.label !== 'Home' && item.label}
-              </Button>
-            ))
+            <>
+              {navItems.map((item, index) => (
+                <Button key={index} onClick={item.action} color="inherit">
+                  {item.icon ? <HomeIcon sx={{ mr: 1 }} /> : null}
+                  {item.label !== 'Home' && item.label}
+                </Button>
+              ))}
+              <IconButton onClick={toggleColorMode} color="inherit">
+                {theme.palette.mode === "dark" ? "🌙" : "☀️"}
+              </IconButton>
+            </>
           )}
         </Toolbar>
       </AppBar>

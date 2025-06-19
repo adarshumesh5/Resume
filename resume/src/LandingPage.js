@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Box, Typography, Button, Link, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useTheme } from "@mui/material/styles";
 import { useColorMode } from "./ThemeContext";
+import Contact from "./Contact";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -118,6 +120,11 @@ const LandingPage = () => {
           >
             🚀 View My Resume
           </Button>
+        </Box>
+
+        {/* Contact Section Below the Hero */}
+        <Box sx={{ mt: 6, pb: 8 }}>
+          <Contact />
         </Box>
       </Box>
     </Parallax>
