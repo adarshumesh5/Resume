@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Box, Typography, Button, Link, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +6,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useTheme } from "@mui/material/styles";
 import { useColorMode } from "./ThemeContext";
-import Contact from "./Contact";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -31,21 +29,31 @@ const LandingPage = () => {
           position: "relative"
         }}
       >
-        {/* Top bar with About, Theme Toggle and Icons */}
+        {/* Top bar with About, Contact, Theme Toggle and Icons */}
         <Box
           display="flex"
           justifyContent="space-between"
           alignItems="center"
           sx={{ px: 3, pt: 2, position: "absolute", width: "100%", top: 0, left: 0 }}
         >
-          <Button
-            variant="text"
-            color="inherit"
-            onClick={() => navigate('/about')}
-            sx={{ fontWeight: "bold", textTransform: "none" }}
-          >
-            About Me
-          </Button>
+          <Box display="flex" gap={2}>
+            <Button
+              variant="text"
+              color="inherit"
+              onClick={() => navigate('/about')}
+              sx={{ fontWeight: "bold", textTransform: "none" }}
+            >
+              About Me
+            </Button>
+            <Button
+              variant="text"
+              color="inherit"
+              onClick={() => navigate('/contact')}
+              sx={{ fontWeight: "bold", textTransform: "none" }}
+            >
+              Contact Me
+            </Button>
+          </Box>
 
           <Box display="flex" alignItems="center" gap={2}>
             <IconButton onClick={toggleColorMode} color="inherit">
@@ -120,11 +128,6 @@ const LandingPage = () => {
           >
             🚀 View My Resume
           </Button>
-        </Box>
-
-        {/* Contact Section Below the Hero */}
-        <Box sx={{ mt: 6, pb: 8 }}>
-          <Contact />
         </Box>
       </Box>
     </Parallax>
