@@ -13,7 +13,7 @@ function ProfilePicture() {
         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         '&:hover img': {
           transform: 'scale(1.08)',
-          boxShadow: `0 0 25px 4px ${theme.palette.mode === 'dark' ? '#00e5ff' : '#2979ff'}`
+          boxShadow: `0px 8px 24px ${theme.palette.mode === 'dark' ? 'rgba(0, 229, 255, 0.6)' : 'rgba(0,0,0,0.2)'}`,
         }
       }}
     >
@@ -24,10 +24,10 @@ function ProfilePicture() {
           width: 180,
           height: 180,
           borderRadius: "50%",
-          border: `3px solid ${theme.palette.mode === 'dark' ? '#00e5ff' : '#2979ff'}`,
+          border: "3px solid #888",
           objectFit: "cover",
           transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          boxShadow: `0 0 15px 2px ${theme.palette.mode === 'dark' ? '#00e5ff' : '#90caf9'}`,
+          boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
         }}
       />
     </Box>

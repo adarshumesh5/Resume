@@ -1,9 +1,27 @@
-import React from 'react'
-import { Typography,  Box,  Link } from "@mui/material";
+import React from 'react';
+import { Typography, Box, Link, Paper, useTheme } from "@mui/material";
+
 function Certifications() {
+  const theme = useTheme();
+
   return (
-    <div>
-      <Box mt={3}>
+    <Box mt={3}>
+      <Paper
+        sx={{
+          p: 2,
+          backgroundColor: theme.palette.mode === "dark"
+            ? "rgba(255, 255, 255, 0.05)"
+            : "rgba(255, 255, 255, 0.6)",
+          backdropFilter: "blur(8px)",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
+          borderRadius: 2,
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+          '&:hover': {
+            transform: 'scale(1.02)',
+            boxShadow: 6
+          }
+        }}
+      >
         <Typography variant="body1" gutterBottom><strong>Certifications:</strong></Typography>
         <Box display="flex" flexDirection="column" gap={1}>
           <Link
@@ -79,9 +97,9 @@ function Certifications() {
             Product Management: Building a Product Roadmap
           </Link>
         </Box>
-        </Box>
-    </div>
-  )
+      </Paper>
+    </Box>
+  );
 }
 
-export default Certifications
+export default Certifications;

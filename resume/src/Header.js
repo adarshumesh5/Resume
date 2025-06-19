@@ -1,23 +1,46 @@
 import React from 'react';
-import { Typography, Link, Box } from "@mui/material";
+import { Typography, Link, Box, Stack, useMediaQuery } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { useTheme } from '@mui/material/styles';
 
 function Header() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <div>
-      <Typography variant="h4" gutterBottom align="center">
+    <Box mb={4} px={2}>
+      <Typography
+        variant={isMobile ? "h5" : "h4"}
+        align="center"
+        gutterBottom
+        sx={{ wordBreak: "break-word" }}
+      >
         ADARSH UMESH
       </Typography>
-      <Typography variant="body1" align="center" gutterBottom>
-        Los Angeles, CA | +1 (747)-333-4258 | adarshumesh657@gmail.com
-      </Typography>
-      <Box display="flex" justifyContent="center" gap={2} mb={2}>
+
+      {/* CONTACT DETAILS STACK */}
+      <Stack
+        direction="column"
+        spacing={1}
+        alignItems="center"
+        sx={{ textAlign: "center" }}
+      >
+        <Typography variant="body2">Los Angeles, CA</Typography>
+        <Typography variant="body2">+1 (747)-333-4258</Typography>
+        <Typography variant="body2" sx={{ wordBreak: "break-all" }}>
+          adarshumesh657@gmail.com
+        </Typography>
+      </Stack>
+
+      {/* ICONS ROW */}
+      <Box display="flex" justifyContent="center" gap={2} mt={2}>
         <Link
           href="https://www.linkedin.com/in/adarsh-umesh/"
           target="_blank"
           rel="noopener"
           color="inherit"
+          aria-label="LinkedIn"
           sx={{
             transition: 'transform 0.2s ease',
             '&:hover': {
@@ -33,6 +56,7 @@ function Header() {
           target="_blank"
           rel="noopener"
           color="inherit"
+          aria-label="GitHub"
           sx={{
             transition: 'transform 0.2s ease',
             '&:hover': {
@@ -44,7 +68,7 @@ function Header() {
           <GitHubIcon fontSize="large" />
         </Link>
       </Box>
-    </div>
+    </Box>
   );
 }
 
