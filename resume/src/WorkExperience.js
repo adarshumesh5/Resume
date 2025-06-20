@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Divider, Paper, List, ListItem, ListItemText, Box, useTheme } from "@mui/material";
+import { Typography, Divider, Paper, List, ListItem, ListItemText, Box, useTheme, Link } from "@mui/material";
 
 const WorkExperience = () => {
   const theme = useTheme();
@@ -31,7 +31,8 @@ const WorkExperience = () => {
           "Built scalable web applications using React.js, Node.js, and Java Spring Boot.",
           "Achieved 95% test coverage across stack using Jest, Mocha, and JUnit.",
           "Reduced technical debt by 25% and improved responsiveness by 30% using Redux.",
-          "Collaborated on API documentation, localization for 24 languages, and performance testing with JMeter."
+          "Collaborated on API documentation, localization for 24 languages, and performance testing with JMeter.",
+          <>Led cross-functional Agile team to win the Q3 2022 Eminence Award by driving continuous delivery, and enhancing collaboration with architects, PMs, and accessibility/localization teams. <Link href={`${process.env.PUBLIC_URL}/Team Rolling Thunders ,.pdf`} target="_blank" rel="noopener" underline="hover">🎖 View Certificate</Link></>
         ]}
         theme={theme}
       />
@@ -42,10 +43,10 @@ const WorkExperience = () => {
         location="Bangalore, India"
         date="Jun 2021 – Dec 2021"
         bullets={[
-          "Built scalable web applications using React.js, Node.js, and Java Spring Boot.",
-          "Achieved 95% test coverage across stack using Jest, Mocha, and JUnit.",
-          "Reduced technical debt by 25% and improved responsiveness by 30% using Redux.",
-          "Collaborated on API documentation, localization for 24 languages, and performance testing with JMeter."
+          "Improved team efficiency by leading technical interviews for entry-level hires, resulting in 4 successful new additions aligned with project needs.",
+          "Boosted accessibility compliance by integrating semantic HTML and ARIA roles, leading to a 20% improvement in Lighthouse accessibility scores.",
+          "Increased delivery predictability by refining sprint planning inputs and ensuring dev tickets had clear acceptance criteria.",
+          "Actively mentored Trainee Engineers on Git workflows, Jira usage, and debugging techniques, reducing onboarding time by 30%."
         ]}
         theme={theme}
       />
@@ -56,9 +57,9 @@ const WorkExperience = () => {
         location="Bangalore, India"
         date="Dec 2020 – May 2021"
         bullets={[
-          "Built scalable web applications using React.js, Node.js, and Java Spring Boot.",
-          "Achieved 95% test coverage across stack using Jest, Mocha, and JUnit.",
-          "Reduced technical debt by 25% and improved responsiveness by 30% using Redux.",
+          "Reduced deployment defects by writing subsystem and regression test cases, contributing to the stabilization of early-stage microservices.",
+          "Detected and resolved 10+ UI inconsistencies across different browsers and devices by conducting cross-browser compatibility testing.",
+          "Accelerated development pipeline by learning and contributing to full-stack features across React.js, Node.js, and Spring Boot within the first 2 months.",
           "Collaborated with senior developers in debugging and resolving production issues, reducing bug resolution time by 15%."
         ]}
         theme={theme}
@@ -89,8 +90,18 @@ const ExperienceEntry = ({ title, company, location, date, bullets, theme }) => 
     <Typography variant="subtitle2">{location} | {date}</Typography>
     <List dense>
       {bullets.map((bullet, index) => (
-        <ListItem key={index}>
-          <ListItemText primary={`• ${bullet}`} />
+        <ListItem key={index} alignItems="flex-start">
+          <ListItemText
+            primary={
+              typeof bullet === 'string' ? (
+                `• ${bullet}`
+              ) : (
+                <Typography component="span" variant="body2">
+                  • {bullet}
+                </Typography>
+              )
+            }
+          />
         </ListItem>
       ))}
     </List>

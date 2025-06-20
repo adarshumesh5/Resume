@@ -62,13 +62,30 @@ const Contact = () => {
           <IconButton onClick={toggleColorMode} color="inherit">
             {theme.palette.mode === "dark" ? "🌙" : "☀️"}
           </IconButton>
-          <Button variant="outlined" onClick={() => navigate("/")}>
-            Home
-          </Button>
+          <Button variant="outlined" onClick={() => navigate("/")}>Home</Button>
         </Box>
       </Box>
 
-      <Paper elevation={4} sx={{ p: 4, borderRadius: 3 }}>
+      <Paper
+        elevation={4}
+        sx={{
+          p: 4,
+          borderRadius: 3,
+          backgroundColor: theme.palette.mode === "dark"
+            ? "rgba(255, 255, 255, 0.05)"
+            : "rgba(255, 255, 255, 0.6)",
+          backdropFilter: "blur(8px)",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
+          boxShadow: theme.palette.mode === "dark"
+            ? "0 0 20px rgba(255, 255, 255, 0.05)"
+            : "0 0 10px rgba(0, 0, 0, 0.1)",
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+          '&:hover': {
+            transform: 'scale(1.01)',
+            boxShadow: 6
+          }
+        }}
+      >
         <Typography variant="h4" gutterBottom align="center">
           Contact Me
         </Typography>
