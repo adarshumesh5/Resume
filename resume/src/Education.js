@@ -6,7 +6,7 @@ const Education = () => {
 
   return (
     <Box my={4}>
-      <Typography variant="h5" gutterBottom>Education</Typography>
+      <Typography variant="h5" gutterBottom>EDUCATION</Typography>
       <Divider sx={{ mb: 2 }} />
 
       <Paper

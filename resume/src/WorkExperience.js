@@ -6,7 +6,7 @@ const WorkExperience = () => {
 
   return (
     <Box my={4}>
-      <Typography variant="h5" gutterBottom>Experience</Typography>
+      <Typography variant="h5" gutterBottom>EXPERIENCE</Typography>
       <Divider sx={{ mb: 2 }} />
 
       <ExperienceEntry

@@ -13,7 +13,7 @@ const Skills = () => {
 
   return (
     <Box my={4}>
-      <Typography variant="h5" gutterBottom>Skills & Certifications</Typography>
+      <Typography variant="h5" gutterBottom>SKILLS & CERTIFICATIONS</Typography>
       <Divider sx={{ mb: 2 }} />
 
       <Paper

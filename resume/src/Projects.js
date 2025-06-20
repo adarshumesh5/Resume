@@ -6,7 +6,7 @@ const Projects = () => {
 
   return (
     <Box my={4}>
-      <Typography variant="h5" gutterBottom>Projects</Typography>
+      <Typography variant="h5" gutterBottom>PROJECTS</Typography>
       <Divider sx={{ mb: 2 }} />
 
       <ProjectEntry
