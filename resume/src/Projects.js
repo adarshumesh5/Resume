@@ -49,7 +49,7 @@ const Projects = () => {
           "Led iterative prototype development and internal testing cycles, improving usability and engagement of the final kit based on insights from QA and child participants.",
           "Streamlined risk management by mitigating external testing delays with neighborhood sessions, maintaining a CPI and SPI of 1.0.",
           "Created and refined instructional content and checklists, reducing classroom execution errors by 30% through real-time testing.",
-          <>View full report: <Link href={`${process.env.PUBLIC_URL}/Mse 402 Handbook .pdf`} target="_blank" rel="noopener" underline="hover">📘 MSE 402 Project Report</Link></>
+          <>View full report: <Link href={`${process.env.PUBLIC_URL}/Mse 402 Handbook.pdf`} target="_blank" rel="noopener" underline="hover">📘 MSE 402 Project Report</Link></>
         ]}
         theme={theme}
       />
